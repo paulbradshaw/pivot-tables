@@ -95,5 +95,38 @@ The `C2` has changed to `C3`. This is because the spreadsheet assumes that you d
 
 Now that you know it does this, you can copy it down the whole column. One way to do this is to first select the cell with the formula in it, then hover over the bottom right corner until you see a black cross, and finally double-click on that cross. The formula will be copied all the way down until it hits a row where there is nothing in the cell to the left (for that reason this is best done where the column to the left is full). Alternatively you can click and drag that black cross down to manually copy the formula.
 
-You should now have a column full of the results of that formula. Most are errors because there is no match.
+It might take a few moments because there's a lot of data here...
 
+OK. You should now have a column full of the results of that formula. Most are errors because there is no match.
+
+Now you need to **sort** the data to bring the matches to the top. Click on any of the cells in that column and then use the small A-Z sort button (normally in the Data tab) to sort the whole dataset by that column, from smallest to largest. This should bring the numbers to the top.
+
+Once sorted, the first entry should be Joanne Moseley: the 'adidas' column for her should show the number `8`. This is because the word 'adidas' begins at the 8th character in cell C2: "One of adidas' key concepts..." (note that spaces are counted as characters too).
+
+The second entry is Anthony Barron, who mentions adidas 13 characters into his nomination story. Notice anything odd about that nomination story?
+
+Look at the others, see if you find anything worth looking into further. What can you find out with a quick bit of googling?
+
+## Case study 3: Pest control in Coventry!
+
+Now you're used to using pivot tables, it's time to use those skills on a dataset which can be analysed in a number of different ways. Rather than telling you what to do, this time you need to think about potential stories and how you might get them.
+
+The data [is pest control requests to Coventry City Council](https://www.coventry.gov.uk/downloads/download/4823/pest_control_service_requests). These are split between a different dataset for each financial year, and are in CSV format, which is a very simple spreadsheet format that can be opened in any spreadsheet tool (it also keeps file size down).
+
+But because I am nice I have already combined *all* those CSVs into one Excel spreadsheet, which [can be downloaded from here](https://github.com/paulbradshaw/pivot-tables/raw/master/Pest_Control_Service_Requests_2013_2017_dataonly.xlsx). 
+
+In fact, I am even nicer than that: I have also added some new columns which show: the year for each report; the month; the postcode district (this is the first part of a postcode); and the ward (an area of the city which elects councillors to represent it at the local council). (see notes below)
+
+Look at what data you have and think about different stories you might try to find in this data. Each column should give you different ideas. 
+
+The next task is to try to get those stories (or at least the basis for them) using a pivot table.
+
+### Notes on the extra data
+
+The year, month and postcode district were all added using a particular spreadsheet function to extract it from the date column (DTRECD) and the postcode column (POSTCD). Use Google to try to find out how you could do that yourself.
+
+The ward was a bit more complicated. You can convert postcodes to ward, constituency etc. using [Doogal's 'batch geocoding' tool](https://www.doogal.co.uk/BatchGeocoding.php). First, generate a list of all the postcodes by using a pivot table (put the postcodes in the 'row' box - no need to do anything else). Next, copy and paste that list into the box on Doogal. Tick the box that says *UK administrative info*. Then click **Geocode**. 
+
+You may have to wait a while for the site to convert all the postcodes. Once it's finished, look at the results in the **Text** tab underneath (the other tabs are 'Map', 'KML' and 'FAQ') and click **Download text**. This will download a CSV spreadsheet which can be added as a new sheet in your existing spreadsheet.
+
+This sheet of postcodes and the wards that they are in (as well as other info) can be used with a `VLOOKUP` function to grab the ward for each postcode in your original data. How do you use that function? Google it...
