@@ -130,3 +130,16 @@ The ward was a bit more complicated. You can convert postcodes to ward, constitu
 You may have to wait a while for the site to convert all the postcodes. Once it's finished, look at the results in the **Text** tab underneath (the other tabs are 'Map', 'KML' and 'FAQ') and click **Download text**. This will download a CSV spreadsheet which can be added as a new sheet in your existing spreadsheet.
 
 This sheet of postcodes and the wards that they are in (as well as other info) can be used with a `VLOOKUP` function to grab the ward for each postcode in your original data. How do you use that function? Google it...
+
+You can use the same function to bring in the populations for each ward (the ONS should have that) to create per capita figures.
+
+### Some things to try
+
+* Pivot by ward & count of reports to find out ward with most reports (but is that just the most populous ward?)
+* Add filter to see rats only 
+* Add filter to see 2017 only 
+* Add columns to see month by month pattern 
+* Remove 2017 filter to see over all years
+* Replace months in columns with years to see annual change 
+* Replace ward in rows with pest to see change by pest 
+
