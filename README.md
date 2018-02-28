@@ -17,7 +17,9 @@ The pivot table will be sorted alphabetically (A-Z) by agent. But you want to so
 
 ## Case study 2: investigating the Olympic Torch Relay
 
-In 2012 I came across the official Olympic Torch Relay website, which listed every torchbearer with details on where they came from, where they would be carrying the torch, their age, and their nomination story. Simple sorting helped identify the youngest and oldest torchbearer, while filters helped drill down to find local stories on who was carrying a torch from 'your area'.
+In 2012 I came across the official Olympic Torch Relay website, which listed every torchbearer with details on where they came from, where they would be carrying the torch, their age, and their nomination story. This was the beginning of a series of stories across national and local newspapers in the UK and internationally, TV and radio, and questions in Parliament. The full story is told in the short ebook [8000 Holes](https://leanpub.com/8000holes).
 
-Pivot tables, however, could provide an overview to show what sort of age distribution there was (the organisers had stated that a quarter of torchbearers would be 16-24 as part of a celebration of youth), and which parts of the country were best (or least) represented.
+Once I had gathered data from the website, I began with simple data techniques: **sorting** helped identify the youngest and oldest torchbearer, while **filters** helped drill down to find local stories on who was carrying a torch from 'your area'.
+
+**Pivot tables**, however, could provide an overview to show what sort of age distribution there was (the organisers had stated that a quarter of torchbearers would be 16-24 as part of a celebration of youth), and which parts of the country were best (or least) represented.
 
